@@ -16,5 +16,10 @@ public class UserRegistration {
         };
         System.out.println(isValidFirstName.validate("^[A-Z]{1}[a-z]{2,}$", "Sammed"));
 
+        Validation isValidLastName = (pattern, lastName) -> {
+            return  "Last Name is " + Pattern.compile(pattern).matcher(lastName).matches();
+        };
+        System.out.println(isValidLastName.validate("^[A-Z]{1}[a-z]{2,}$", "Pachore"));
+
     }
 }
